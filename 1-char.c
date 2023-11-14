@@ -10,6 +10,6 @@ int _ischar (va_list std)
 {
 char ptr;
 ptr = va_arg(std, int);
-_putchar(ptr);
+putchar(ptr);
 return (0);
 }

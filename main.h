@@ -2,8 +2,14 @@
 #define MAIN_H
 #include <stdio.h>
 #include <stdarg.h>
-#include <string.h>
+#include <limits.h>
 #include <unistd.h>
+#include <stdlib.h>
+
+typedef struct{ 
+const char *sp;
+int (*s)();
+}pope;
 
 int _printf(const char *format, ...);
 int _ischar (va_list std);

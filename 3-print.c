@@ -5,6 +5,6 @@
  */
 int printper_48(void)
 {
-_putchar(48);
+putchar(48);
 return (0);
 }

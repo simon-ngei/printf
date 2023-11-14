@@ -1,4 +1,4 @@
-#inclde "main.h"
+#include "main.h"
 
 /**
  *_printf - function to produce an output
@@ -8,18 +8,35 @@
 
 int _printf(const char *format, ...)
 {
-int num = 0;
-va_list std;
-if (format == NULL)
-return (nil);
-va_start(std, format);
-while (format != '\0')
+pope n[] ={
+{"%c", _ischar}, {"%s", _isstring}, {"%%", printper_48},
+};
+va_list ptr;
+int i = 0, dis = 0;
+int j;
+va_start(ptr, format);
+if (format == NULL || (format[0] == '%' && format[1] == '\0'))
+return (-1);
+
+Here:
+while (format[i] != '\0')
 {
-if (format != '%')
+j = 15;
+while (j >= 0)
 {
-write(1, format, 1);
+if (n[j].sp[0] == format[i] && n[j].sp[1] == format[i + 1])
+{
+dis = dis + n[j].s(ptr);
+i = i + 3;
+goto Here;
 }
-format++;
+j--;
 }
-return (count);
+putchar(format[i]);
+i++;
+dis++;
 }
+va_end(ptr);
+return (dis);
+}
+

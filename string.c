@@ -7,7 +7,7 @@
 int _strlen(char *ptr)
 {
 int j;
-for (j = 0; ptr[j] != 0; i++)
+for (j = 0; ptr[j] != 0; j++)
 ;
 return (j);
 }
@@ -19,7 +19,7 @@ return (j);
 int _strlent(const char *ptr)
 {
 int j;
-for (j = 0; ptr[j] != 0; i++)
+for (j = 0; ptr[j] != 0; j++)
 ;
-return (i);
+return (j);
 }
